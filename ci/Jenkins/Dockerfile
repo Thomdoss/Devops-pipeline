@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM openjdk:17-ea-17-jdk-slim
+FROM eclipse-temurin:17-jdk-alpine
 
 # Switch to root to install Maven and Docker
 USER root
@@ -19,4 +19,5 @@ RUN apt-get update && \
     sudo usermod -a -G docker jenkins
 
 # Expose Jenkins port
+
 EXPOSE 8080
